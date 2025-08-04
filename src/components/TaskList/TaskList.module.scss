@@ -1,0 +1,15 @@
+@use '../../styles/App' as *;
+
+.tasks{
+}
+.title{
+    @include adaptivFont(42, 36);
+    font-weight: bold;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 30px;
+    row-gap: 35px;
+}

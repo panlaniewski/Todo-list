@@ -1,0 +1,14 @@
+@use '../../../styles/App' as *;
+
+.input {
+    color: var(--main-color);
+    font-size: 32px;
+    padding: 16px 41px;
+    background-color: var(--green-light);
+    border: 3px solid var(--green);
+    border-radius: 35px;
+    width: 100%;
+    &::placeholder{
+        color: var(--green);
+    }
+}

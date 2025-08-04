@@ -1,0 +1,25 @@
+@use '../../../styles/App' as *;
+
+.button {
+    font-size: 32px;
+    color: #FFFF;
+    font-weight: bold;
+    background-color: var(--green);
+    border-radius: 35px;
+    padding: 10px 30px;
+    transition: background-color .3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    @media (hover: any-hover) {
+        &:hover {
+            background-color: var(--hover-color);
+            transition: background-color .3s ease;
+        }
+    }
+    @media (max-width: 424.9px) {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+}

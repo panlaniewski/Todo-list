@@ -1,0 +1,94 @@
+@use '../../styles/App' as *;
+
+.task {
+    flex: 1 1 auto;
+    @media (min-width: 767.9px) {
+        &:hover {
+            .remove,
+            .edit {
+                opacity: 1;
+                visibility: visible;
+                transition: all .3s ease;
+            }
+        }
+    }
+    
+}
+.deadline {
+    @include adaptivFont(32, 28);
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+.body {
+    background-color: var(--green-light);
+    border: 3px solid var(--green);
+    border-radius: 35px;
+    padding: 25px 30px;
+    transition: background-color .3s ease;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    transition: all .3s ease;
+    &.checked{
+        background-color: var(--grey);
+        border-color: var(--border-grey);
+        transition: all .3s ease;
+    }
+}
+.head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+}
+.title {
+    @include adaptivFont(32, 26);
+    flex: 1 1 auto;
+    padding: 3px 0;
+    &.checked{
+        text-decoration: line-through;
+    }
+}
+.desc {
+    padding: 15px 25px;
+    background-color: var(--green-middle);
+    border-radius: 25px;
+    font-size: 22px;
+    transition: all .3s ease;
+    word-wrap: break-word;    
+    overflow-wrap: break-word;  
+    white-space: normal;      
+    min-width: 0;           
+    flex: 1 1 auto;    
+    &.checked{
+        background-color: var(--grey-middle);
+        transition: all .3s ease;
+    }
+}
+.remove,
+.edit {
+    @media (min-width: 767.9px) {
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease;
+    }
+}
+.textarea{
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-size: 22px;
+    resize: none;
+    line-height: inherit;
+}
+.input {
+    padding: 0;
+    @include adaptivFont(32, 22);
+    flex: 1 1 auto;
+}
+.overdue {
+    color: #F2463A;
+}
+.icon {
+    color: var(--main-color)
+}
+

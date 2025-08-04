@@ -1,0 +1,23 @@
+@use '../../../styles/App.scss' as *;
+
+.checkbox input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    border: 3px solid var(--main-color);
+    outline: none;
+    cursor: pointer;
+}
+.wrapper {
+    position: relative;
+}
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
